@@ -1,0 +1,71 @@
+<meta charset="UTF-8"/>
+<html>
+<head>
+<title>Mafalda albumposting</title>
+<style>
+body {
+padding: 50px;
+}
+
+main {
+    background-image: url("mafibeatles.jpg");
+    background-repeat: no-repeat;
+    height: 228px;
+    width:800px;
+    margin:auto;
+}
+
+#tapa {
+    background-image: none;
+    background-size: cover;
+    width:90px;
+        height:81px;
+        margin-left: 610px;
+        margin-top: 60px;        
+        transform: rotate(-9deg) skew(-20deg);
+        position:absolute;
+        border: 3px solid black;
+}
+
+#buttons {
+width:800px;
+margin:auto;
+font-family:sans-serif;
+font-size:80%;
+}
+
+#buttons a{
+color: #ddd;
+}
+
+#button_A {
+background:#ddd;
+border: none;
+margin-top:50px;
+
+}
+
+</style>
+	</head>
+	<body>
+		<main>
+			<div id="tapa">
+			</div>
+		</main>
+		<div id="buttons">
+			<p><button id="button_A">Cambiá la tapa</button>
+			<a href="http://facebook.com/matatias">Facebook del autor.</a></p>
+			</div>
+<script>
+
+const buttonA = document.querySelector('#button_A');
+const headingA = document.querySelector('#heading_A');
+
+document.getElementById('tapa').style.backgroundImage = 'url(https://i.discogs.com/XO-Barxecgb47E1_XVm2WYDRfgwPzxEgJV9JmEmNLKo/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5MzYx/Ny0xNTc3NjQyNTc5/LTgwMDQuanBlZw.jpeg)';
+buttonA.onclick = () => {
+	var urltapa = prompt("Pegá la url de la tapa que querés (http, dos puntos, todo eso). Si está mal vas a ver la original.");
+	document.getElementById('tapa').style.backgroundImage = 'url('+urltapa+')';
+} 
+</script>
+</body>
+</html>
